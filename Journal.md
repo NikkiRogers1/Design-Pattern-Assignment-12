@@ -7,3 +7,9 @@ I don't have any major confusion about the challenge right now. I believe I have
 Phase 1- The Pot - The Model
 I built a CoffeePotModel for my coffee pot simulator. I created private fields to track the current volume and maximum capacity of the pot. I added a constructor to create the pot and a getter to retrieve the current amount of coffee. I also created methods to brew and pour coffee and added exception handling to prevent invalid amounts and exceeding the pot's capacity.
 The Model is responsible for managing and validating its own state. It is important for the Model to validate its own data instead of relying on other classes because the Model controls its own data.
+
+Phase 2 - The Terminal Interface - The View
+
+I created a CoffeePotView class with three methods: showMenu(), getUserInput(), and displayMessage(). In Main, I added the menu so the program displays the available commands and accepts input from the user. I also added a while loop with an if statement that allows the program to exit when the user types "exit".
+When I tested the program, I entered "status" and verified that it printed the input and continued running. When I entered "exit", the program ended the loop and stopped running.
+The View is responsible for the menu and what the user interacts with, while the Model is responsible for how the coffee pot works. It is better for each class to have its own responsibilities instead of putting everything into one class because it keeps all the working parts organized. The Model handles the coffee pot's data and behavior, while the View handles what the user interacts with.

@@ -11,11 +11,18 @@ public class Main {
         pot1.pour(5);
         System.out.println("After  Pour: " + pot1.getCurrentVolume() + " oz.");
 
-    
-        pot1.brew(-5);
-        System.out.println(pot1.getCurrentVolume());
 
+        CoffeePotView view = new CoffeePotView();
+        
+        while (true) {
+        view.showMenu();
+        String userInput = view.getUserInput();
+        view.displayMessage(userInput);
+        if (userInput.equals("exit")) {
 
-
+            break;
+        }
+       
+        }
     }
 }
