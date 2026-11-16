@@ -5,24 +5,12 @@ public class Main {
 
         System.out.println("Starting pot Volume: " + pot1.getCurrentVolume() + " oz.");
 
-        pot1.brew(10);
-        System.out.println("After Brew: " + pot1.getCurrentVolume() + " oz.");
-
-        pot1.pour(5);
-        System.out.println("After  Pour: " + pot1.getCurrentVolume() + " oz.");
-
-
         CoffeePotView view = new CoffeePotView();
-        
-        while (true) {
-        view.showMenu();
-        String userInput = view.getUserInput();
-        view.displayMessage(userInput);
-        if (userInput.equals("exit")) {
 
-            break;
-        }
+        CoffeePotController controller = new CoffeePotController(pot1, view);
+
+        controller.start();
+        
        
-        }
     }
 }
