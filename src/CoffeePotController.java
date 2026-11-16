@@ -44,6 +44,7 @@ public class CoffeePotController {
                     model.pour(amount);
                 }
 
+                view.displayMessage("Current volume: " + model.getCurrentVolume() + " oz.");
             }
             else {
                 view.displayMessage("Invalid command. Please try again.");

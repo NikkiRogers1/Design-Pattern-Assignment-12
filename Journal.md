@@ -19,3 +19,8 @@ When the user types a command like brew 10 and presses Enter, the View receives 
 The Model is responsible for changing the coffee pot's volume. For example, when the Controller calls brew(10), the Model increases the current volume by 10 ounces. The Model also checks that the amount is allowed.
 After the Model updates the volume, the Controller can request the current volume using getCurrentVolume(). The View then displays the information to the user using displayMessage().
 Each class has its own responsibility. The View handles user interaction, the Controller processes commands, and the Model manages the coffee pot's data and behavior.
+
+Phase 4 - The Full Cycle- Integration
+
+The Controller gave me the most trouble when wiring the three components together. I had difficulty understanding how all the if/else statements worked together to process commands and determine what action needed to happen.
+Separating the Model, View, and Controller made adding error handling harder to understand at first because I had to figure out where the different checks and error messages belonged. Most of the error handling was handled in the Controller, while the Model checked whether the amounts were allowed. After working through the assignment, I can see why each class has its own responsibility. The Model handles the coffee pot, the View handles user input and displays messages, and the Controller connects the two by processing commands. Even though it was harder at first, separating the responsibilities makes the program more organized.
